@@ -1,0 +1,89 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:22+02:00
+
+====== VL19 ======
+1	00:00 - 19:24		Fortsetzung Globale Analyse
+2	19:24 - 		Architekturdiagramme / Sichten
+
+
+2	Architektursicht
+		Definition: Repräsentation eines ganzen Systems aus der Perspektive einer kohärenten Menge von Anliegen (IEEE P1471 2002)
+		
+	Architekturblickwinkel
+		Definition: Spezifikation der Regeln und Konventionen, um eine Architektursicht zu konstruieren und zu benutzen (IEEE P1471 2002)
+		
+		Ein Blickwinkel ist ein Muster oder eine Vorlage, von der aus individuelle Sichten entwickelt werden können, durch Festlegung von
+			- Zweck
+			- adressierter Betrachter
+			- und Techniken für Erstellung, Gebrauch und Analyse
+			
+	Siemens-Blickwinkel (Hofmeister u.a., 2000)
+		Konzeptioneller Blickwinkel: beschreibt logische Struktur des Systems, abstrahiert weitgehend von technologischen Details
+		
+		Modulblickwinkel: beschreibt die statische, logische Struktur des Systems
+		
+		Ausführungsblickwinkel: beschreibt die dynamische, logische Struktur des Systems
+		
+		Code-Blickwinkel: beschreibt die "anfassbaren" Elemente des Systems (Quelldateien, Bibliotheken, ausführbare Dateien etc.)
+		
+		{{../siemensblickwinkel.jpg}}
+		
+		{{../siemensblickwinkel2.jpg}}
+		
+		
+	Konzeptioneller Blickwinkel
+		- ist der Anwendungsdomäne am nächsten
+		- Systemfunktionalität wird abgebildet auf
+			- Konzeptionelle Komponenten: rechenbetonte Elemente oder Datenhaltung
+			- Konnektoren: Kontroll- und Datenfluss zwischen konzeptionellen Komponenten 
+
+	Engineering-Belange
+		- Wie erfüllt das System seine Anforderungen?
+		- Wie werden Commercial-off-the-Shelf-Components (COTS) in das System integriert?
+		- Wie wird domänenspezifische Soft- und Hardware einbezogen?
+		- Wie kann die Auswirkung von Anforderungen oder der Anwendungsdomäne minimiert werden?
+		
+	UML-Komponentendiagramm
+		{{../komponentendiagramm.jpg}}
+		
+		{{../komponentendiagramm2.jpg}}
+		
+		
+	Konzeptioneller Blickwinkel:
+		{{../konzeptionellerblickwinkel.jpg}}
+		
+		
+	Modulblickwinkel:
+		- bildet Komponenten und konnektoren auf Module, Schichten und Subsysteme ab
+		- setzt konzeptionelle Lösung mit aktuellen Softwareplattformen (Programmiersprachen, Bibliotheken) und Technologien um
+		- beschreibt statische Aspekte
+		
+		{{../modulblickwinkel.jpg}}
+	
+	Engineering-Belange:
+		- Wie wird das Produkt auf die Software-Plattform abgebildet?
+		- Welche Softwaredienste werden benutzt und von wem?
+		- Wie wird das Testen unterstützt?
+		- Wie können Abhängigkeiten zwischen Modulen minimiert werden?
+		- Wie kann die Wiederverwendung von Modulen maximiert werden?
+		- Welche Techniken können eingesetzt werden, um Auswirkungen von Änderungen zu minimieren?
+		
+	
+	Klassendiagramm:
+		{{../klassendiagramm.jpg}}
+		
+	
+	Ausführungsblickwinkel:
+		- beschreibt dynamische Aspekte
+		- beschreibt, wie Module auf Elemente der Ausführungs- und Hardwareplattform abgebildet werden
+		- definiert Laufzeitelemente und deren Attribute (Speicher- und Zeitbedarf, Allokation auf Hardware)
+		
+	Engineering-Belange
+		- Wie verläuft Kontroll- und Datenfluss zwischen Laufzeitkomponenten?
+		- Wie kann Ressourcenverbrauch ausgewogen werden?
+		- Wie können Nebenläufigkeit, Replikation und Verteilung erreicht werden, ohne die Algorithmen unnötig zu verkomplizieren?
+		- Wie können Auswirkungen von Änderungen in der Ausführungsplattform minimiert werden?
+		
+		{{../ausführungsblickwinkel.jpg}}
+

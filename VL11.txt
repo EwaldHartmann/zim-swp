@@ -1,0 +1,98 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:40:25+02:00
+
+====== VL11 ======
+1	00:00 - 01:09:11	Bedeutung einer Anforderungsspezifikation
+2	01:09:11 - Ende	Einführung UML
+
+1		Zweck							Folge von Mängeln
+		-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		Abstimmung mit dem Kunden		Die Anforderungen bleiben ungeklärt, Wünsche des Kunden bleiben unberücksichtigt.
+		Entwurf							Entwerfer fehlt Vorgabe, darum mehr Kommunikation / eigene Vorstellung als Vorgabe.
+		Handbuch						Basis für das Handbuch fehlt, es wird darum phänomenologisch verfasst
+		Testvorbereitung					Systematischer Test ist unmöglich
+		Abnahme						Korrektheit ist subjektiv, Streit ist unvermeidbar
+		Wiederverwendung					nicht spezifizierte Systeme sind kaum durchschaubar, darum schwer wiederzuverwenden
+		spätere Reimplementierung			Kompatibilität setzt vorraus, dass man weiss womit die neue Software kompatibel sein soll.
+		
+		
+		Angestrebte Eigenschaften der Spezifikation
+			Inhaltlich:
+				- zutreffend (nicht "korrekt")
+				- vollständig (relativ zu Kundenwünschen)
+				- widerspruchsfrei (oder konsistent, dadurch realisierbar)
+				- neutral, d.h. abstrakt (keine technischen Details)
+			in der Darstellung
+				- leicht verständlich (für alle Zielgruppen)
+				- präzise (schließt Umgangssprache aus)
+			in der Form
+				- leicht erstellbar (was die Notationen und Modelle betrifft)
+				- leicht verwaltbar (also auch zweckmäßig strukturiert)
+				- objektivierbar ( auch - nicht sinnvoll - "testbar" genannt)
+				
+				
+		Regeln für Analyse und Spezifiaktion
+		{{../regelnanalyseundspez.jpg}}
+		
+		
+		
+		Inhalt Anforderungsspezifikation nach IEEE 830.1998
+	1. Einführung
+				1.1 Zweck
+				1.2 Rahmen
+				1.3 Definitionen, Akronyme, Abkürzungen
+				1.4 Referenzen
+				1.5 Übersicht über das Dokument
+	2. Allgemeine Beschreibung
+				2.1 Produktperspektive
+				2.2 Produktfunktionen
+				2.3 Charakteristika der Benutzer
+				2.4 Einschränkungen
+				2.5 Annahmen und Abhängigkeiten
+	3. Detaillierte Beschreibung
+
+
+	Softwaresystemattribute
+		- oft als nicht-funktionale Anforderungen bezeichnet
+		- müssen objektivierbar sein
+		
+		zb "Das System soll sicher sein."
+		
+		vs
+		- PGP-Verschlüsselung wird verwendet
+		- Logging aller Aktionen
+		- Nachrichten dürfen nur über Verschlüsselungskomponente verschickt werden
+		- Indizierte Zugriffe auf Felder müssen zur Laufzeit geprüft werden
+		- Eingabedaten müssen auf Validität geprüft werden (keine SQLi)
+
+ 
+2	Klare Empfehlung zum lernen von UML mit vielen Beispielen:
+		Das Buch von Rupp u. a. (2007) ist als E-Book innerhalb des Uni-Netzes umsonst verfügbar:
+		http://www.hanser-elibrary.com/isbn/9783446430570
+
+	Was ist ein Modell?
+		- Abbild eines Originals, bei dem auch Information verloren geht
+	Wozu modellieren wir?
+		- um etwas zu verstehen
+		- um Vorhersagen machen zu können
+		- um etwas zu dokumentieren
+	Wann modellieren wir?
+		- jederzeit. Projektplan, Anforderungen, Architektur...
+		
+	Objektorientierte Analyse und Modellierung
+		Anhand von Geschäftsprozessen..
+			- identifiziere Akteure
+			- Beschreibe Anwendungsfälle
+			- Bestimme statisches Modell
+				- Identifiziere Objekte
+				- Identifiziere Eigenschaften der Objekte
+				- Bestimme Assoziationen zwischen Objekten
+				- Fasse Objekte zu Klassen zusammen
+				- bestimme Mulltiplizitäten der Assoziationen
+				- ordne Klassen in Vererbungshierarchie ein
+			- Erstelle Verhaltensmodell
+				- Identifiziere Ereignisse und modelliere Interaktionen in Anwendungsfällen
+				- Identifiziere Verhalten der Objekte
+				- Beschreibe das Verhalten (Vor- und Nachbedingungen)
+

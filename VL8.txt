@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:56+02:00
+
+====== PVL8 ======
+1	00:00 - 16:05 	Anforderungsanalyse
+2	16:05 - 22:00 	Kano-Modell
+3	22:00 - 39:01 	Vorgehen Anforderungsanalyse
+4	39:01 - Ende 	Ist-Analyse
+1	Warum ist Anforderungsanalyse so schwer?
+		- Kunden wissen häufig nicht, was genau sie wollen bzw können es nicht richtig äußern
+		- Kunden sprechen "ihre Sprache" (eigene Fachbegriffe)
+		- Unterschiedliche Kundengruppen haben unterschiedliche Anforderungen, die sich auch widersprechen können (Chef vs echte Benutzer)
+		- politische Entscheidungen können Anforderungen beeinflussen (Gender-Kacke, wohooo)
+		- sich verändernde Anforderungen, auch während der Entwicklung
+
+
+2	Kano-Modell:
+	{{../kano.jpg}}
+	
+	
+	
+3	Schritte der Anforderungsanalyse:
+	1. Ist-Analyse - Häufige Fehler:
+			- Kunden wollen keine Veränderungen, sondern __Verbesserungen__
+			- Kunde sagt, was neu sein soll, aber nicht was so bleiben soll
+			- Kunde != Endnutzer, Chef weiss ggfs nicht, was die Angestellten wollen bzw brauchen
+			
+	2. Soll-Analyse - Häufige Fehler: 
+			- Entwickler gleiten in technische Details ab
+			- Kunde hat keine klare Vorstellung oder kann diese nicht vermitteln
+			
+	3. Spezifikation - Häufige Fehler: 
+			- Anforderungen bleiben vage
+			- Implementierungsdetails statt Anforderungen
+			
+			
+

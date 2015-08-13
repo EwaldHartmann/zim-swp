@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:38+02:00
+
+====== VL24 ======
+1	00:00 - Ende		Fortsetzung Software-Qualitätssicherung
+
+
+1	Typen von Komponententests
+		Black-Box-Test: Komponente wird nur mit Kenntnis der Schnittstellenbeschreibung entworfen (Implementierung unbekannt)
+		
+		Techniken:
+			- Äquivalenztest
+			- Grenztest
+			- (zustandsbasierter Test)
+			
+			
+		White-/Glass-Box-Test: Testfall wird mit Kenntnis der Implemetierung entworfen
+		
+		Techniken:
+			- Pfadtest
+			- (zustandsbasierter Test)
+			
+			
+		Äquivalenztest
+			Idee:
+				- Äquivalente Eingaben werden zusammengefasst
+				- Zwei Eingaben sind äquivalent, wenn sich der Prüfling äquivalent verhält
+				- Ein Testfall wird als Repräsentant der Äquivalenzklasse aufgestellt
+				
+			Kriterien:
+				- Abdeckung: Jede mögliche Eingabe gehört zu einer Äquivalenzklasse
+				- Disjunktion: Keine Eingabe gehört zu mehr als einer einzigen Äquivalenzklasse
+				- Repräsentation (die Hoffnung): Falls Ausführung einen fehlerhaften Zustand anzeigt, sobald ein bestimmtes Mitglied einer Äquivalenzklasse als Eingabe benutzt wird, dann kann derselbe fehlerhafte Zustand entdeckt werden, wenn irgendein anderes Mitglied dieser Äquivalenzklasse als Eingabe verwendet wird
+
+
+		Grenztest
+			Beobachtung: "Off-by-one"-Fehler kommen häufig vor
+			
+			Idee: Grenzen (Randbereiche, Sonderfälle) von Äquivalenzklassen testen.
+			
+			Beispiel:
+			Schaltjahrregel: Ein Jahr ist ein Schaltjahr, wenn
+				- es durch 4 teilbar ist
+				- es sei denn, es ist durch 100 teilbar
+					- es sei denn, es ist durch 400 teilbar
+				
+				2000 ist ein Schaltjahr, 1900 ist kein Schaltjahr
+				
+				{{../grenztests.jpg}}
+				
+
+		Pfadtest:
+			Ziel: Testfälle sollten alle Code-Teile testen
+			
+			Idee: Konstruiere Testfälle, die jeden möglichen Pfad mindestens einmal ausführen
+			
+			Grafik spare ich mir, weil sollte klar sein.  Handout "testen.pdf", S. 31 / 55
+
+			
+
+

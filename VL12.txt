@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:40:28+02:00
+
+====== VL12 ======
+1	00:00 - 03:15	Joa.. Bullshit.
+2	03:15 - Ende	UML		
+
+
+2	Anfang siehe Ende letzter Punkt VL 12
+
+	Ist → Soll
+	Schwierig dabei: Dinge im abstrakten beschreiben
+	Einfacher: von kontreten Geschäftsprozessen ausgehen
+	
+	Beispiele: 
+		- Ausleihe: Vormerkung, Abholung, Mahnung, Rückgabe
+		- Buchverwaltung: Anschaffung neuer Bücher, Ausinventarisierung
+		- Buchsuche
+		
+	UML-Beispiel in PDF "modellierung.pdf", S. 10/97
+	
+	Definitionen
+		- Akteur
+			- repräsentiert eine kohärente Menge von Rollen, die von Benutzern in der Interaktion mit dem System eingenommen werden können
+			- können Menschen und andere Dinge sein (z.b. andere automatisierte Systeme)
+		- Anwendungsfall
+			- beschreibt eine Menge von Aktionssequenzen (Varianten eingeschlossen)
+			- jede Sequenz repräsentiert die Interaktion zwischen externen Akteuren mit dem System
+			- Folge is beobachtbares Resultat, relevant für Akteur
+			
+	Merkmale von Geschäftsprozessen:
+		- Systemübergreifend
+		- unterbrechbar
+		- lang laufend
+		- erfordern fortlaufende Interaktion zwischen vielen Akteuren
+		- bestehen aus Anwendungsfällen
+		
+	
+	Objekte vs Klassen
+		Instanz-Ebene
+			Objektdiagramme beschreiben statische Zusammenhänge auf der Ebene einzelner, konkreter Dinge
+		Schema-Ebene
+			Klassendiagramme beschreiben statische Zusammenhänge unabhängig von Details konkreter Objekte, auf der Ebene mehrerer gleichartiger Dinge
+	
+	Objektdiagramm
+		Anwendungsfall -> Objekte
+		11{{../objekteanwendungsfall.jpg}}
+	
+	
+	Klassendiagramm:
+		Klasse: Menge von gleichartigen Objekten mit gemeinsamen Eigenschaften
+		{{../objekte-klassen.jpg}}
+
+
+
+

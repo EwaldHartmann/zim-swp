@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:40+02:00
+
+====== VL5 ======
+1	00:00 - 12:28 	Organisatorischer Kram, irrelevant
+2	12:28 -  Ende 	Vorgehen bei der Software-Entwicklung / Modelle
+
+
+2	Extreme Programming
+	Handout "prozesse.pdf", S. 45/66 und 46/66
+	
+	
+	Scrum
+	{{../scrum.jpg}}
+	Handout "prozesse.pdf", S. 49/66 ff	
+	Planung vom aktuellen Standpunkt aus bei Betrachtung der aktuellen Situation
+	Product-Backlog - Beinhaltet Anforderungen, die noch umgesetzt werden müssen ("Pflichtenheft")
+	Sprint - Kurzer Arbeitszeitraum, normalerweise 4 Wochen
+	Sprint-Planung - Das für den Kunden wichtigste wird aus dem Product-Backlog geholt und eingeplant. Das Team als ganzes entscheidet darüber, was genau angegangen wird und in 4 Wochen machbar ist.
+	Sprint-Backlog - Sammlung der Aufgaben, die für den aktuellen Sprint vorgesehen sind.
+	Tägliches, möglichst kurzes Treffen (Standup-Meeting). Austausch was gestern geschafft wurde, was für heute vorgenommen ist und wo Probleme auftauchen können.
+	Nach dem Sprint - Review: kleiner Akzeptanztest mit dem Kunden über das aktuelle Inkrement. Binäre Entscheidung - Modul vollständig erfüllt oder zurück in den Product-Backlog.
+	Retrospektive: Innerhalb des Teams verbesserung für den nächsten Sprint absprechen.
+	
+	Scrum-Rollen (Details im Handout "prozesse.pdf", S. 50/64)
+	- Product Owner
+	- Team
+	- Scrum-Master
+	
+	Kostenschätzung (Aufwand) in Scrum:
+	"Schätzpoker", jeder im Team schreibt seinen geschätzten Aufwand für jedes Arbeitspaket auf und sie werden zeitgleich "aufgedeckt", ansonsten greift der Ankereffekt (alle weiteren Personen orientieren sich an dem Schätzwert, den die erste Person angibt.).
+	Gibt es große unterschiede wird diskutiert, warum man auf die jeweiligen Punkte kommt. Dann erneute Bewertung des Pakets durch alle. Iterativ weiter, bis die Punkte nahe beeinander sind.
+	Mögliche Punktzahlen richten sich nach der Fibonacci-Folge:
+	{{../scrum-skala.jpg}}
+	
+	Entwicklungsgeschwindigkeit: Punkte pro Sprint. Empirische Anpassung zur effektiveren Planung
+	
+	
+	Kanban
+	Den Prozess selbst evolutionär verändern
+	Handout "prozesse.pdf", S. 60/66 ff
+
+	Cleanroom-Development - in der VL + Handout (zur Vertiefung..) erwähnt, aber nicht erklärt in den Folien. Mögliche "Überraschung" in der Klausur.

@@ -1,0 +1,84 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:40:03+02:00
+
+====== VL9 ======
+1	00:00 - 1:05:48	Ist-Analyse
+2	1:05:48 - Ende	Soll-Analyse - Kreativität / Innovation
+
+1	Techniken zur Ist-Analyse
+	1. Auswertung vorhandener Dokumente
+	2. Befragung
+			- schriftlicher Fragebogen
+			- Interview
+	3. Beobachtung
+			- anekdotisch ↔ systematisch
+			- teilnehmend ↔ nicht teilnehmend
+			- offen ↔ verdeckt
+			- selbst ↔ fremd
+			- Feld ↔ Labor
+			
+			
+	1. - sollte klar sein.
+			
+	2. Fragen zu den Fragen:
+				- Wird die Frage verstanden? (Wird wissen dazu vorrausgesetzt, zb Fachworte)
+				- Bezugsrahmen der Befragten? (Befragte Person sollte mit den Aktionen, zu denen die Fragen sind, aktuell zu tun haben)
+				- Informationsstand der Befragten? (Weiss die befragte Person überhaupt, worum es dabei geht? Worst case wird eine Antwort erfunden)
+				- Art der Frage? (offen, geschlossen, hybrid - "Freitext"-Antwort oder multiple choice bzw ein Mix daraus?)
+				- Anordnung der Fragen? (Kontext der Fragen kann Antworten beeinflussen, zb als Einstieg "Würde die Software Sie überflüssig machen?")
+				- Erhebungssituation? (Möglicher Einfluss der aktuellen Situation auf die Antworten)
+				- Gründe für die Antworten? (zb will die befragte Person uns ggfs sabotieren, weil deren Arbeitsplatz nutzlos wird?)
+
+
+2	Do-It-Prozess
+		- Fragestellung (definieren)
+		- Ideen suchen
+		- Ideen auswählen
+		- umsetzen
+		
+		
+	Die 5 Gebote der Ideenfindung
+	1. Suche viele Ideen
+	2. Unterstütze wilde Ideen
+	3. Baue auf anderen Ideen auf
+	4. Bleibe fokussiert
+	5. Urteile später
+
+
+	Kreativitätsmethoden
+		Chaotische Methoden:
+			- Mindmap
+				Is klar, oder?
+			- Brainstorm
+				Is klar, oder?
+			- Reizwortanalyse
+				Assoziationen zu einem Reizwort, im Prinzip Brainstorm
+			- Bildstimulation
+				Assoziationen zu einem Bild, im Prinzip Brainstorm
+		
+		Systematische Methoden:
+			- Brain-Writing 6 / 3 / 5
+				6 Teilnehmer, jeweils 3 Ideen, pro Person ein Zettel, Zettel damit wird 5x weitergegeben
+				Jeder 3 eigene Ideen, auf den Zetteln der anderen überlegt man sich Variationen von deren Ideen, zb zum verbessern und schreibt sie darunter.
+			- Morphologische Matrix
+				Kranker scheiss. tl;dr = Tabelle mit mehreren Ideen, dann permutieren
+			- Osborns Checkliste
+				Checkliste, die man für jeden Gegenstand durchgehen kann um systematisch (simple) möglichkeiten zu finden, wie man etwas verbessern kann
+					- Vergrößern?
+					- Verkleinern?
+					- Dazu tun?
+					- Weglassen?
+					- Kombinieren?
+					- Funktion übertragen?
+					- Vertauschen?
+					- Ersetzen?
+			- Kundennutzen-Matrix
+				Eine Matrix, X-Achse → Alle Schritte eines Ablaufs, Y-Achse → Verbesserungsmöglichkeiten, zb;
+				{{../kundennutzenmatrix.jpg}}
+				
+
+
+			- Konzeptextraction
+				Ideen von anderen suchen und auf ihren Kern reduzieren. Dann auf eigenes Anwenden.
+	

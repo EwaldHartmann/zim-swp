@@ -1,0 +1,87 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:19+02:00
+
+====== VL18 ======
+1	00:00 - 07:32		Fortsetzung Softwarequalität
+2	07:32 - 53:40		Software-Architektur
+3	53:40 - Ende		Globale Analyse
+
+2	Beispiel Twitter
+		Zuerst ein großer "Klumpen" in Ruby, später modularisiert
+
+
+	Beispiel LinkedIn
+		Evolution der Architektur, Handout "architektur.pdf", S. 10 / 115 ff
+		
+		
+	Was ist Architektur?
+		Software-Architektur ist die grundlegende Organisation eines Systems, verkörpert: (IEEE P1471 2002)
+			- in seinen Komponenten
+			- deren Beziehung untereinander und zu der Umgebung
+			- und die Prinzipien, die den Entwurf und die Evolution leiten
+
+
+	Bedeutung von Software-Architektur
+		- Kommunikation zwischen allen Interessenten
+			- Aufteilung der Arbeit in unabhängig bearbeitbare Teile
+			- hoher Abstraktionsgrad, der von vielen verstanden werden kann
+		- Frühe Entwurfsentscheidungen
+			- nachhaltige Auswirkungen
+			- frühzeitige Analyse
+		- Transferierbare Abstraktion des Systems
+			- eigenständig wiederverwendbar
+			- unterstützt Wiederverwendung im großen Stil (Software-Produktlinien)
+	
+	
+	Einflussfaktoren
+		- Produktfunktionen und -attribute
+			- z.b. Performanz, Ansprüche an Zuverlässigkeit, Umfang und Stabilität der Anforderungen
+		- Organisation
+			- z.b. Budget, verfügbare Zeit, Teamgröße und -erfahrung
+		- Technologie
+			- z.b. verfügbare Hard- und Software
+	Keiner der Faktoren kann isoliert behandelt werden → globale Analyse
+	
+	Ein Faktor ist nur dann relevant, wenn er Einfluss auf die Architektur hat
+	
+	
+3	Globale Analyse
+		
+		Analyse nach Hofmeister u.a.:
+		{{../globaleanalysehofmeister.jpg}}
+		
+		
+		Analysiere Faktoren:
+			- Identifiziere und beschreibe Faktoren
+				- die viele Komponenten treffen
+				- die sich über die Zeit ändern
+				- die schwer zu erfüllen sind
+				- mit denen man wenig Erfahrung hat
+			- Beispiele:
+				- Umfang funktionaler Anforderungen
+				- Abgabetermin
+				- Stabilität der Hardware-Plattform
+				
+		Charakterisiere ihre Flexibilität
+			- Kann der faktor beeinflusst oder geändert werden, so dass der Architekturentwurf vereinfach werden kann?
+				- Auslieferung der Funktionalität ist verhandelbar, weniger wichtige Funktionalität kann in späterem Release ausgeliefert werden
+			- Wie kann man ihn beeinflussen?
+				- Nur nach rechtzeitiger Absprache mit dem Kunden
+			- Zu welchem Grad kann man ihn beeinflussen?
+				- Der Kunde hat Mindestanforderungen, die erfüllt werden müssen
+				
+		Charakterisiere ihre Veränderlichkeit
+			- Kann sich der Faktor __während der Entwicklung__ ändern?
+			- In welcher Weise kann sich der Faktor ändern?
+				- Prioritäten können sich ändern
+				- Anforderungen können wegfallen, weil nicht mehr relevant
+				- Anforderungen können hinzukommen, weil sich Rahmenbedingungen geändert haben
+			- Wie wahrscheinlich ist die Änderung während und nach der Entwicklung?
+			- Wie oft wird er sich ändern?
+			- Wird der Faktor betroffen von Änderungen anderer Faktoren?
+				- Änderung technologischer Aspekte (Software- / Hardwareplattform)
+				
+		Strategien zur Problemlösung entwickeln
+		Problemkarten
+

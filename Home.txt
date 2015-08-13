@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:02+02:00
+
+====== Home ======
+Lernkram für SWP
+
+Definitiv __nicht__ Thema der Prüfung werden laut Koschke (VL 26, ab 1:06:00, jeweils Titel der Handout-pdfs)
+	- Vorbemerkungen
+	- Softwaretechnik
+	- gesetzlicher Rahmen
+	- Teamarbeit

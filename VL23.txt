@@ -1,0 +1,62 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:35+02:00
+
+====== VL23 ======
+1	00:00 - 03:55		Organisatorischer Kram, irrelevant
+2	03:55 - 39:57		Model-View-Controller / Server Faces / Facelets
+3	39:57 - 52:56		Architekturstile
+4	52:56 - Ende		Software-Qualitätssicherung
+
+
+2	Keine Notizen weil nich kapiert.
+
+
+3	Architekturstil Schichtung:
+		{{../schichtung.jpg}}
+		
+		
+		Elemente:
+			- Module und Schichten
+			- Use-Beziehung
+			
+		Struktur:
+			- Module sind eindeutig einer Schicht zugeordnet
+			- Module einer Schicht dürfen nur auf Module derselben und der direkt darunter liegenden Schicht zugreifen
+			
+		Ausführungsmodell:
+			- Aufruf von Methoden tieferer Schichten
+			- Datenfluss in beide Richtungen (von der unteren Schicht zur oberen durch Rückgabeparameter)
+			
+		
+		Vorteile:
+			- Schicht implementiert virtuelle Maschine, deren Implementierung leicht ausgetauscht werden kann, ohne dass höhere Schichten geändert werden müssen
+		
+		Nachteile:
+			- höherer Aufwand durch das "Durchreichen" von Information
+			- Redundanz durch Dienste tieferer Schichten, die in hohen Schichten benutzt und auf allen Ebenen dazwischen repliziert werden
+
+
+
+4	Arten der Software-Qualitätssicherung
+		- konstruktiv: entstehende Software bzw. der Entwicklungsprozess besitzen Qualitätseigenschaften a priori
+		- analytisch: diagnostische Maßnahmen, um existierendes Qualitätsniveau zu bestimmen
+		
+		
+		Arten der Prüfungen:
+			- Validierung: Are we doing the right thing?
+			- Verifikation: Are we doing the thing rigth?
+			
+		
+		Software-Prüfung:
+			{{../softwareprüfung.jpg}}
+			
+			
+		
+		"Der Test und seine Verwandten"
+			Möglichkeiten, die Zuverlässigkeit zu steigern:
+				- Fehlervermeidung (zb. Entwicklungsmethoden, Verifikation, statische Analyse)
+				- Fehlerentdeckung (zb. Tests, assert, "Quality-Feedback-Agent", Flugschreiber)
+				- Fehlertoleranz: Behandlung von Fehlern zur Laufzeit, um Programm fortzusetzen
+
+

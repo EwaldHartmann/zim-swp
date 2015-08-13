@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:43+02:00
+
+====== VL25 ======
+1	00:00 - 04:31		Organisatorisches, irrelevant
+2	04:31 - Ende		Tests / Testabdeckung
+
+
+
+2	Maße der Testabdeckung
+		Befehlsabdeckung/Statement-Coverage: Verhältnis von Anzahl der mit Testdaten durchlaufenen Anweisungen zur Gesamtanzahl der Anweisungen
+			
+		Zweig-/Entscheidungsüberdeckung: Verhältnis von Anzahl der mit Testdaten durchlaufenen Zweige zur Gesamtanzahl der Zweige
+			
+		Bedingungsabdeckung: Verhältnis von Anzahl der mit Testdaten durchlaufenen Terme innerhalb von Entscheidungen zur Gesamtanzahl der Terme.
+
+		Abdeckung aller Bedingungskombinationen: Verhältnis von Anzahl der mit Testdaten durchlaufenen Bedingungskombinationen zur Gesamtanzahl der Bedingungskombinationen.
+
+		__Pfadabdeckung:__ Verhältnis von Anzahl der mit Testdaten durchlaufenen Pfade zur Gesamtanzahl der Pfade.
+
+
+	Zustandsbasiertes Testen
+		Verhalten von Komponente hängt ab von
+			- der Eingabe
+			- ihrem Zustand
+			
+		Beispiel: Zustände eines Stacks
+			{{../stackzustände.jpg}}
+			
+		Für alle Zustände einer Komponente:
+			- Komponente wird in zu testenden Zustand gebracht
+			- Test für alle möglichen Stimuli:
+				- korrekte Eingaben
+				- fehlerhafte Eingaben
+				- und Aktionen, die Zustandsübergänge bewirken
+				
+				
+	Vergleich White- und Black-Box-Test
+		{{../whiteblackbox.jpg}}
+		
+		Black- vs. White-Box-Tests
+			Nicht entweder-oder, sondern sowohl-als-auch!
+			
+			Komplementäre Verwendung:
+	1. erstelle Funktionstest
+	2. Messe Abdeckung
+	3. Wenn Abdeckung nicht ausreichend, ergänze durch Strukturtest, zurück zu 2.
+	
+

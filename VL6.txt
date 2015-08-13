@@ -1,0 +1,94 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:46+02:00
+
+====== VL6 ======
+1	00:00 - 03:25 		Organisatorisches / Fragen zur letzten VL - irrelevant
+2	03:25 - 32:46 		Projektplanung (Handout "projekt.pdf", Referenzen auf Seitenzahlen beziehen sich automatisch darauf.)
+3	32:46 - 1:14:26 	Zeitplan
+4	1:14:26 - Ende 	Risiken
+
+2	Was ist ein Projekt?
+	- Für eine begrenzte Zeit
+	- Eine Organisation
+	- Folgt einem bestimmten Ziel
+	
+	
+	Wann wird in einem Projekt geplant?
+	- Am Anfang:
+		- Gliederung in Phasen, Aktivitäten, Arbeitspakete
+		- Zeitlicher Ablauf (Meilensteine)
+		- Arbeitsorganisation
+		- Aufbau der Dokumentation
+		
+	- Während des Projekts:
+		- Controlling (Überwachung des Fortschritts)
+		- Reaktion auf Abweichungen (Anpassung des Planes)
+		
+
+	Elemente eines Projektes:
+	- Aktivität: Arbeitseinheit mit präzisem Anfangs- und Enddatum
+		- enthält Aufgaben
+		- benötigt Ressourcen
+		- produziert Arbeitsprodukt
+		
+	- Projektfunktion: Aktivität, die die gesamte Projektlaufzeit überspannt. Beispiele:
+		- Projektmanagement
+		- Konfigurationsmanagement
+		- Qualitätssicherung
+		
+	- Arbeitspaket: Spezifikation für eine zu erledigende Arbeit. Definiert:
+		- Arbeitsprodukt
+		- Personalbedürfnisse
+		- erwartete Entwicklungsdauer
+		- verwendete Ressourcen
+		- Akzeptanzkriterien
+		- Namen des Hauptverantwortlichen
+		- sonstige relevante Aspekte der Arbeit
+		
+	- Meilenstein:
+		- Menge von Kriterien
+		- vorhergesehener Zeitpunkt
+		- erreichter Zeitpunkt
+	für die Abnahme eines (Zwischen-)Resultats
+	
+	- Baseline: Arbeitsprodukt
+		- Formal begutachtet und akzeptiert
+		- nur durch formalen kontrollierten Änderungsprozess änderbar
+		
+
+	Vorgehen zur Planung
+	Iteration folgender Schritte, bis Resultate zusammenpassen:
+		- Auswahl eines geeigneten Prozesses (Prozessmodells)
+		- Strukturierung der Arbeit in kleinere Einheiten (Projektstrukturplan)
+		- Abschätzung Aufwand / Risiken
+		- Zuordnung Ressourcen und Zeitplan aufstellen
+		- Aufstellen Dokumentationsplan
+		- Aufstellen Prüfplan
+		- Aufstellen Organisationsplan
+		- Def. Meilensteine
+		
+		
+	Inhalt Projektplan: 6 w-Fragen
+		- warum
+		- was getan wird
+		- (für) wieviel Geld
+		- von wem
+		- wann
+		- womit, welche Hilfsmittel und Techniken
+		
+	Aufbau Projektplan:
+	0. Version und Änderungsgeschichte
+	1. Einleitung
+	2. Projektorganisation
+	3. Managementprozess
+	4. Technischer Prozess
+	5. Arbeitspakete, Zeitplan, Budget
+	6. Zusätzliche Elemente
+	7. Index
+	8. Anhang 
+
+
+3	Gantt-Diagramme. Nicht wirklich spannend.
+
+4	Sollte soweit klar sein. Personalausfall, unbekannte Technologien, Änderungswünsche des Kunden etc.

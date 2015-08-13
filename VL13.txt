@@ -1,0 +1,125 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:40:31+02:00
+
+====== VL13 ======
+1	00:00 - 16:13 		UML
+2 	16:13 - 27:13 		Schnittstellen
+3	27:13 - 36:45		Paketdiagramme
+4	36:45 - 46:10		Aktivitätsdiagramme
+5	46:10 - 47:53		UML-Interaktionsdiagramme
+6	47:53 - 1:01:17	Sequenzdiagramme
+7	1:01:17 - Ende	UML-Zustandsautomatendiagramme
+
+
+1	Aggregation
+		- ist spezielle Assoziation zur Verdeutlichung von "Teil-Ganzes-Beziehung"
+		- beschreibt Zusammenfassung von Komponenten zu einem Aggregat
+		- z.b. ein Buch aus einer Reihe
+		- dargestellt durch "leere Raute"
+		
+	Komposition
+		- Exitenz der Komponenten
+		- jede Komponente gehört zu höchstens einem Aggregat
+		- z.b. ein Buch gehört zu einem Verlag
+
+
+	Generalisierung
+		- (Mehrfach-)Vererbung
+		- Redundanz wird vermieden
+
+
+2	Geheimnisprinzip nach Parnas (1972)
+		Schnittstellen sind ein Kontrakt zwischen:
+			- Verwender:
+				- Darf sich nur auf zugesicherte Annehmen verlassen
+				- muss Vorbedingungen einhalten
+			- Anbieter:
+				- muss zugesichertes Verhalten implementieren
+				- darf sich nur auf zugesicherte Vorbedingungen verlassen
+				
+		Schnittstellen werden so entworfen, dass
+			- Kopplung auf das Mindestmaß beschränkt wird
+			- d.h. die Details, die sich ändern können, werden hinter Schnittstelle verborgen
+			
+	
+	Zusammenfassung zu Schnittstellen
+		- Schnittstelle ist Kontrakt (Vertrag..) zwischen Anbieter und Benutzer, der die erlaubten wechselseitigen Annahmen festlegt
+		- Programmiersprachen erlauben die Spezifikation syntaktischer Eigenschaften von Schnittstellen
+		- moderne Programmiersprachen bieten Schnittstellen als eigenes Sprachkonstrukt an
+		- nur wenige erlauben die Spezifikation semantischer Eigenschaften, wie
+			- Vor- und Nachbedingungen
+			- weitere Zusicherungen, wie z.b. Speicher- und Zeitkomplexität
+
+
+3	Zusammenfassung von Modellelementen zu Gruppen.
+	Anwendbarkeit:
+		- alle Arten von Modellelementen
+		- häufig für:
+			- Anwendungsfälle
+			- Klassen (Programmiersprachenunterstützung durch Packages oder Namespaces)
+			
+	Kriterien:
+		- logisch zusammengehörige Elemente
+		- 7 ± 3-Regel  (7 ± 3 Elemente kann man sich gut merken, daher sollte das die Anzahl sein, die man gruppiert)
+	
+	
+	Paketdiagramme: Schachtelung
+	{{../paketdiagrammschachtelung.jpg}}
+	
+	
+	Statisches Datenmodell: beschreibt die statischen Konzepte und Ihre Beziehungen.
+		- Domänenmodellierung: Konzepte stammen aus Anwendungsdomäne
+		- Entwurfsmodellierung: Konzepte sind Datenstrukturen für die Konzepte der Anwendungsdomäne und Konzepte aus der Programmierdomäne (z.b. Listen, Hashmaps etc)
+		
+
+4	Aktivitätsdiagramme
+		- Wurzeln: Flussdiagramme, Petrinetze
+		- modellieren klassenübergreifendes Verhalten (Kontrollfluss)
+		- beschreiben häufig Anwendungsfälle
+		- Einsatz empfohlen bei hauptsächlich intern ausgelösten Zustandsübergängen (einfacher Kontrollfluss)
+		
+	Rauten sind if/else Knoten, ggfs auch Merge-Knoten
+	Balken sind forks oder sync-Punkte mehrerer Threads
+	
+	
+5	UML-Interaktionsdiagramme
+	Beschreibungsinhalt:
+		- dynamische Systemaspekte
+		- exemplarische Beschreibung von Interaktionsabfolgen zwischen kollaborierenden Objekten (Inter-Objektverhalten)
+	zentrale Modellierungskonstrukte:
+		- Objekte: "Dinge" mit eigener Identität
+		- Nachrichten
+			- beschreiben den Austausch von Informationen zwischen Objekten zum Auslösen von Aktivitäten
+			- sind Signale / Ereignisse oder Methodenaufrufe
+			
+	Anwendung:
+		- Präzisierung von Szenarien (exemplarische Folgen von Aktivitäten)
+		- Protokollierung des Nachrichtenaustausches
+		- Erhebung der von einzelnen Objekten bereitgestellten Funktionalität (Dienste, Methoden)
+		
+	Varianten:
+		- Sequenzdiagramme
+			- betonen zeitlichen Ablauf
+		- Kommunikationsdiagramme
+			- betonen Objektstruktur
+			
+	Grenzen:
+		- beschreiben Verhalten meist nur beispielhaft und unvollständig (nur Nachrichtenverkehr, nicht Inhalt)
+
+
+6	Sequenzdiagramme
+		Verzicht auf Notizen, weil ziemlich einfach.
+		
+	Kommunikationsdiagramme können in Sequenzdiagramme und umgekehrt übersetzt werden:
+	{{../kommunikationsdiagramm.jpg}}
+	
+	
+	
+7	Zustandsautomatendiagramme
+		- modellieren Objektlebenszyklus: Verhalten eines Objekts in Bezug auf die verfügbaren Operationen seiner Klasse
+		- Zustand: Menge von Attributwerten eines Objekts
+		- Transition = Zustandsänderung
+		
+	Beispiel in PDF "modellierung.pdf" S. 77 / 97 ff
+	

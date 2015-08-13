@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:32+02:00
+
+====== VL3 ======
+1	00:00 - 04:50 	Organisatorischer Kram, irrelevant
+2	04:50 - 14:45 	Fortsetzung Beispiel fehlerhafter Software
+3	14:45 - 18:20 	Software-Engineering
+4	18:23 - Ende 	Vorgehen bei der Software-Entwicklung (ausdrücklich Prüfungsrelevant) / Modelle
+
+
+2	Thema Haftung (für Software)
+	Haftungsauschluss steht immer wieder in dem EULA, rechtlich in DE aber unsicher
+	
+
+3	IEEE-Definition: Software engineering may be defined as the systematic design and development of software products and the management of the software process.
+
+
+4	Am Ende prüfen, ob das Ziel erreicht wurde - eigenes Programm testen.
+	Vorher überlegen, wie man etwas programmieren möchte
+	Vor dem Design das Ziel spezifizieren
+
+	1. Anforderungsanalyse
+	2. Entwurf
+	3. Implementierung
+	4. Testen
+	
+	Prozessmodelle:
+		- Wasserfallmodell - Ein mal alle Stufen durchgehen.
+		- Iterativ - Mehrfach alle Stufen, Modul für Modul
+	Wahl der Methode abhängig vom Projekt
+	Software ist immer ein Unikat
+	In der Praxis am weitesten verbreitet: "Code and fix"-Vorgehen. Entwickeln, Ausliefern, bei unzufriedenheit des Kunden ändern, Ausliefern und so weiter.
+	
+	Gütekriterien:
+	1. Ein Prozess muss wohldefiniert sein - Es muss klar sein welche Aktivitäten zusammenwirken, was eine Aktivität produziert, wie die Ergebnisse weiterverwendet werden
+	2. Jeder muss wissen was er tut, welche Rolle er einnimmt, und dieser Rolle müssen klare Rechte und Pflichten zugewiesen werden
+	3. Der Prozess sollte quantifizierbar sein, zb messen wie viele Issues sind noch offen, wie viele wurden abgearbeitet, Dauer Bugfixes
+	4. In jedem Prozess sollte immer eine Lernkomponente integriert sein, für die Zukunft lernen was man in einem Prozess besser machen kann
+	5. Der Prozess muss dem Problem angemessen sein. (Z.b. Unterschied das drölfte mal nen Webshop vs Software eines AKW schreiben)
+
+	Wasserfall-Modell
+	{{../Wasserfallmodell.jpg}}
+	Weitere Infos, pro/con: Handout "prozesse.pdf", Seite 11/66
+	
+	
+	V-Model
+	{{../V-Modell.jpg}}
+	pro/con: Handout "prozesse.pdf", S.13/66
+	Linke Seite konstruktiv, etwas erstellen
+	Rechte Seite analytisch, vorheriges überprüfen
+
+
+	Testgetriebene Softwareentwicklung - Sobald Anforderungen bekannt sind, Tests schreiben. Dadurch lassen sich unklarheiten / Fehler in den Anforderungen schon früh feststellen, Zeit- und Kostenersparnis
+	{{../Testgetrieben.jpg}}
+	
+	
+	Inkrementelle Entwicklung:
+	{{../inkrement1.jpg}}
+	
+	Dazugehöriges Beispiel, Textverarbeitungsprogramm:
+	{{../inkrement2.jpg}}
+	pro/con: Handout "prozesse.pdf", S. 23/66
+	
+	
+	Unterschied Verifikation / Validierung
+	Verifikation: Überprüft, ob mein Programm sich an die Anforderungen hält
+	Validierung: Überprüft, ob die Kundenwünsche korrekt verstanden wurden, zb mit Prototypen

@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:40:07+02:00
+
+====== VL10 ======
+1	00:00 - 04:01	Organisatorischer Kram
+2	04:01 - 25:35	Soll-Analyse - Kreativität / Innovation
+3	25:35 -  		Prototyping
+
+2	Folgende Punkte aus dieser VL zwecks Zusammenhang noch in VL9 beschrieben
+		- Morphologische Matrix
+		- Osborns Checkliste
+		- Kundennutzen-Matrix
+		- Konzeptextraction
+
+
+3	Prototyping:
+		Zielsetzung:
+			- Anforderungen anhand eines Beispiels erheben und überprüfen
+			- technische Möglichkeiten überprüfen und demonstrieren
+			- frühzeitig mögliche Lösungsansätze präsentieren
+		Idee:
+			- schnelle und billige Entwicklung eines prototypischen Systems als Diskussionsgrundlage
+		Typen unterscheiden sich in:
+			- Lebensdauer: Wegwerfprototyp, evolutionrer Prototyp
+			- Zweck: technische Machbarkeit, Demonstration der Funktionalität oder Interaktion
+
+
+	Lebendauer:
+		Wegwerf-Prototyp:
+			- beschreibt ein Softwaresystem exemplarisch
+			- dient zur Erhebung und Analyse von Anforderungen oder zur Überprüfung technischer Machbarkeit
+			- demonstriert die Funktionalität, die mit Stakeholdern diskutiert werden soll
+			- implementiert nicht notwendigerweise die gezeigte Funktionalität (GUI-Prototyp)
+			- ist als Komponente für das Endprodukt ungeeignet, weil billig erstellt (Quick'n'Dirty)
+
+
+		
+		Evolutionärer Prototyp:
+			- dient zur schnellen Bereitstellung eines funktionsfähigen Systems im Rahmen von evolutionären Prozessmodellen zur Softwareentwicklung
+			- wird in weiteren Ausbaustufen zum endgültigen Produkt weiterentwickelt
+
+
+	Technischer Prototyp:
+		- zeigt die technische Umsetzbarkeit von Ansätzen zur Problemlösung
+		- implementiert einen (kleinen) Ausschnitt der Funktionalität des Systems
+		- wird eher zur Machbarkeitsabschätzung und -demonstration eingesetzt
+
+	
+	Unterscheidung Technischer Prototypen in Horizontaler und Vertikaler Prototyp
+		Horizontaler Prototyp: 
+			realisiert Aspekte einer spezifischen Ebene des Softwaresystems, Bsp: Anwendungsprototyp:
+				{{../horizontalerproto.jpg}}
+		
+		
+		Vertikaler Protoyp:
+			realisiert ausgewählte Aspekte des Softwaresystems vollständig:
+				{{../vertikalerprototyp.jpg}}
+				
+	
+	Storyboards für Interaktionen
+		- passives Storyboard (Papier)
+		- aktives Storyboard (animierter Prototyp)
+		- interaktives Storyboard (ausführbarer Prototyp)
+
+
+
+	Übersicht Analysetechniken
+	{{../analysetechniken.jpg}}
+	
+	
+	Produktqualität nach ISO / IEC-Standard 9126 (2001)
+	{{../produktquali.jpg}}
+	

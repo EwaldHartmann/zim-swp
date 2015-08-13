@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:28+02:00
+
+====== VL21 ======
+1	00:00 - 04:22		Organisatorisches, irrelevant
+2	04:22 - 49:34		Fortsetzung Modularisierung
+3	49:34 - 		Entwurfsmuster
+
+
+
+2	Key Word in Context (KWIC)
+		{{../kwic.jpg}}
+		
+		Dadurch betrachtete Qualitätsaspekte und Szenarien:
+			- Änderbarkeit
+				- Eingabeformat ändert sich
+				- größere Dateien müssen verarbeitet werden
+				- riesige Dateien müssen verarbeitet werden
+			- seperate Entwickelbarkeit
+				- verteilte Arbeit an Entwicklungsteams
+			- Performanz
+				- berechne KWIC für FB3-Webseiten
+				
+		Ablauf:
+	1. Eingabe der Daten
+	2. Interne Speicherung der Daten
+	3. Indizierung (Zeile, Wortanfang, Wortende)
+	4. Zyklische Rotation der Indizierung
+	5. Sortierung der Indizierung
+	6. Ausgabe der Indizierung
+
+
+
+3	Entwurfsmuster
+		Definition: "Musterlösung" für ein wiederkehrendes Entwurfsproblem
+		
+		Bestandteile:
+			- Name (kurz und beschreibend)
+			- Problem: Was das Entwurfsmuster löst
+			- Lösung: Wie es das Problem löst
+			- Konsequenzen: Folgen und Kompromisse des Musters
+			
+		Beispiel:
+			{{../singleton.jpg}}
+
+			Das Singleton-Pattern stellt sicher, dass es nur genau eine Instanz (bzw. eine kontrollierte Anzahl von Instanzen)
+			gibt. Das kann in bestimmten Situationen sinnvoll und gewünscht sein. Es vermeidet in gewissem Sinne globale
+			Variablen, aber eigentlich ist es nur eine objektorientierte Variante von globalen Variablen, denn das Singleton ist ja
+			global verfügbar.
+
+			Nachteilig wirkt sich aus, dass ein Singleton typischerweise Abhängigkeiten verschleiert. Da innerhalb beliebiger
+			Methoden der Zugriff auf ein Singleton möglich ist, gibt es keinerlei Anhaltspunkte außerhalb dieser Methoden,
+			dass eine Abhängigkeit zu diesem Singleton besteht. Abhängigkeiten sind sonst z.B. an Konstruktor-Parametern
+			oder an Instanz- bzw. Klassenvariablen zu erkennen.
+
+			Zudem wird Testen erschwert, da üblicherweise die Testfälle voneinander unabhängig sein sollten. Wenn Testfälle
+			die Nutzung eines Singletons beinhalten, müsste für garantierte Unabhängigkeit immer die gesamte virtuelle
+			Maschine neu gestartet werden, da das Singleton ja nur genau einmal erzeugt wird.
+
+			Wenn die Fachlogik ein echtes Singleton in verteilten Umgebungen, d.h. in Fällen mit verteilten virtuellen
+			Maschinen, verlangt, dann kann das Singleton-Pattern nicht eingesetzt werden, da es die Einzigartigkeit nur
+			innerhalb einer virtuellen Maschine garantiert.
+	
+	
+	Kategorien von Entwurfsmustern:
+		- Erzeugungsmuster
+			- betreffen die Erzeugung von Objekten
+			- Beispiel: Singleton
+		- Strukturelle Muster
+			- betreffen Komposition von Klassen und Objekten
+			- Beispiel: Composite
+		- Verhaltensmuster
+			- betreffen Interaktion und Verantwortlichkeiten
+			- Beispiel: Command, Memento, Observer
+			
+			
+	Entwurfsmuster Command
+		{{../command.jpg}}
+		
+		
+		Konsequenzen:
+			- Entkopplung von Objekt, das Operation aufruft, von dem, welches weiß, wie man es ausführt
+			- Kommandos sind selbst Objekte und können als solche verwendet werden (Attribute, Vererbung etc)
+			- Hinzufügen weiterer Kommandos ist einfach
+

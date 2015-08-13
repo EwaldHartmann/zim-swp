@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:50+02:00
+
+====== VL7 ======
+1	00:00 - 25:14 	Fortsetzung Risiken
+2	25:14 - Ende	Teamwork-Kram..
+
+
+1	Personalausfall, Gründe für Abbrüche von Software-Projekten
+
+2	Langweilig..
+
+	Phasen in der Teamarbeit nach Tuckman:
+	1. Forming → In der Gruppe zurechtfinden, Stärken / Schwächen finden
+	2. Storming → Ein gemeinsames Ziel definieren
+	3. Norming → Gemeinsame Regeln festlegen, Rechte / Pflichten
+	4. Performing → Arbeit halt.
+	5. Adjourning → Trennen nach Projektende

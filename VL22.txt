@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:32+02:00
+
+====== VL22 ======
+1	00:00 - Ende		Fortsetzung Entwurfsmuster
+
+
+1	Fortsetzung Command
+
+	Memento:
+		- ist Kopie des Zustands eines Ausgangsobjekts O
+		- wird von anderen Objekten benutzt, um früheren Zustand von O wieder herzustellen
+		- Zustand ist opak (undurchsichtig) für alle anderen Objekte
+		
+		Memento im Allgemeinen
+		{{../mementoallgemein.jpg}}
+
+
+	
+	Entwurfsmuster Composite
+		{{../composite.jpg}}
+		
+		Zweck: Teil-von-Hierarchie mit einheitlicher Schnittstelle beschreiben (überall wo ein Ganzes benutzt werden kann, kann auch ein Teil benutzt werden und umgekehrt)
+
+
+		Struktur:
+			{{../compositestruktur.jpg}}
+			
+		"Teilnehmer":
+			Client
+				- manipuliert Objekte der Komponenten nur durch die Schnittstelle von Composite
+				
+			Component:
+				- deklariert einheitliche Schnittstelle
+				- (optional) implementiert Standardverhalten
+				
+				
+	Entwurfsmuster Observer
+		Anwendbarkeit:
+			- Komponenten hängen von anderen Komponenten ab
+			- Änderung der einen Komponente muss Änderung der anderen nach sich ziehen
+			- Komponenten sollen lose gekoppelt sein: Komponente kennt seine Abhängigkeiten nicht im Voraus (zur Übersetzungszeit)
+			
+		Lösungsstrategie:
+			- Abhängige registrieren sich bei Komponente
+			- Komponente informiert alle registrierten Abhängigen über Zustandsänderung
+			
+		Struktur:
+			{{../observer.jpg}}
+			
+			"Teilnehmer" Subject:
+				- kennt seine Observer (zur Laufzeit)
+				- kann beliebig viele Observer haben
+				- stellt Schnittstelle zur Verfügung, um Observer zu registrieren und abzutrennen
+				
+			"Teilnehmer" Observer:
+				- deklariert Schnittstelle für die Update-Nachricht
+				
+			"Teilnehmer" ConcreteSubject 
+				- implementiert Subject-Schnittstelle
+				- ruft bei jeder Zustandsänderung notify auf
+				
+			"Teilnehmer" ConcreteObserver 
+				- kennt ConcreteSubject-Objekt
+				- verarbeitet Zustand dieses Subjects
+				- implementiert Update, um auf veränderten Zustand zu reagieren
+				
+			
+			Konsequenzen:
+				- abstrakte Kopplung zwischen Subject und Observer
+				- unterstützt Rundfunk (Broadcast)
+				- unerwartete Updates, komplizierter Kontrollfluss
+				- viel Nachrichtenverkehr, auch wenn sich ein irrelevanter Aspekt geändert hat
+				
+				
+	Verfeinerungen des Entwurfsmuster Observer
+		- Push-Modell
+			- Subject sendet detaillierte Beschreibung der Änderung
+			→ umfangreiches Update
+			→ vermeidet getState(), aber nicht update()
+			
+		- Pull-Modell
+			- Subject sendet minimale Beschreibung der Änderungen
+			→ Observer fragt ggfs die Details nach
+			→ erfordert weitere Nachrichten, um Details abzufragen
+		
+		- Explizite Interessen
+			- Observers melden Interesse an spezifischem Aspekt an; Aspekt wird zusätzlicher Parameter von update()
+			 
+

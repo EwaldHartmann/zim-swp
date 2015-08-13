@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:19+02:00
+
+====== VL2 ======
+1 	00:00 - 08:40 		Organisatorischer Kram, irrelevant
+2	08:40 - 38:47 		Vorschau SWP2, Miniprojekt, viele schlechte Witze, irrelevant
+3 	38:47 - 58:48 		"Was ist Software", "Software - Ein Produkt wie jedes andere?"
+4	58:48 - 1:14:09 	Ablauf Softwareentwicklung, Schwerpunkt Wartung
+5	1:14:09 - Ende 	Beispiel fehlerhafte Software
+
+
+3  	Software ist nicht nur das ausführbare Programm, sondern auch Quelltext
+	Software ist ein Medium zur Kommunikation zwischen Entwickler und PC
+	Ein Menschliches Konstrukt
+	---
+	Definition der IEEE: Programme, Abläufe, Dokumentation, Daten die zum laufen der Software benötigt wird.
+	---
+	Software ist: Imateriell, abstrakte Sprache
+	Tests können nicht die Korrektheit von Software zeigen, lediglich vorhandene Fehler zeigen
+	Software wird eingesetzt, wo anpassbarkeit notwendig ist
+
+
+4	1. Anforderungsanalyse
+	2. Entwurf der Software
+	3. Implementierung
+	4. Testen
+	5. Wartung / Evolution, beginnt nach erster Auslieferung
+	
+	Tests machen den großteil der Erstentwicklung aus
+	50% - 80% der Entwicklung finden erst statt, nachdem die Software ausgeliefert wurde
+
+	Wartbarkeit, Dokumentation sehr wichtig
+
+	Moore's Law
+	
+
+5	Unbehandelter buffer overflow führt zu Selbstzerstörung einer Rakete

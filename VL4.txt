@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:39:37+02:00
+
+====== VL4 ======
+1	00:00 -  Ende 	Vorgehen bei der Software-Entwicklung / Modelle
+
+
+1	Spiralmodell:
+	{{../spiralmodell.jpg}}
+	pro/con: Handout "prozesse.pdf", S.29/66
+
+	
+	Rational Unified Process
+	{{../RUP.jpg}}	
+	Details (wichtig!): Handout "prozesse.pdf", S. 30/66ff
+	Ist das am besten Dokumentierte Prozessmodell überhaupt
+	Laut Koschke in der VL empfiehlt sich das Modell besonders für SWP2 im nächsten Semester, daher möglicherweise Klausurinhalt.
+	
+	Agiles Prozessmodell / Agile Programmierung
+		- Prinzipien der agilen Entwicklung, Handout "prozesse.pdf", S. 43/66
+	
+	Extreme Programming
+	Handout "prozesse.pdf", S. 45/66 und 46/66
+

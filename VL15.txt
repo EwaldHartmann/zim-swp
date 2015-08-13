@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:08+02:00
+
+====== VL15 ======
+1	00:00 - 04:33		Organisatorischer Kram, irrelevant
+2	04:33 - 36:50 		Zustandsautomaten für Protokolle
+3	36:50 - 37:45		Anwendung von Zustandsdiagrammen
+4	37:45 - 38:40		Interaktionen vs Methoden
+5	38:40 - 55:07		Objektorientierte Analyse und Modellierung
+6 	55:07 - 1:05:57	Modellierung von Benutzerschnittstellen
+7	1:05:57 - Ende	Softwareergonomie
+
+
+3	Anwendung von Zustandsdiagrammen
+		- Beschreibung von Objektlebenszyklen pro Klasse
+		- Beschreibung von Protokollen
+		- Verfeinerung von Anwendungsfällen
+
+
+4	Interaktionen vs Methoden
+		- Interaktionen
+			- Beschreibt das Wechselspiel zwischen Akteuren über Botschaften 
+			- liefern Methoden für die modellierten Klassen
+			- beschreiben jedoch nicht ide Methoden selbst
+			
+			
+5	Objektorientierte Analyse und Modellierung
+	Ausgehend von Geschäftsprozessen:
+		- identifiziere Akteure
+		- beschreibe Anwendungsfälle
+		- bestimme statisches Modell
+			- identifiziere Objekte
+			- identifiziere Eigenschaften der Objekte
+			- bestimme Assoziationen zwischen Objekten
+			- Fasse Objekte zu Klassen zusammen
+			- Bestimme Multiplizitäten der Assoziationen
+			- Ordner Klassen in Vererbungshierarchie ein
+		- erstelle Verhaltensmodell
+			- identifiziere Ereignisse und modelliere Interaktionen in Anwendungsfälllen
+			- identifiziere Verhalten der Objekte
+			- beschreibe das Verhalten (__Vor- und Nachbedingungen__)
+	
+	Operationen / Nachrichten
+		Beschreibung:
+			- Parameter: Eingabe und Ausgabe
+			- Vorbedingung: beschreibt die Annahmen der Methode, die gelten müssen, damit sie ausgeführt werden kann
+			- Nachbedingung: beschreibt das Resultat der Methode
+			- Fehlerbedingungen: Verletzung der Vorbedingung und Fehler die während der Ausführung auftreten können
+			- Verhalten in Fehlersituationen: Nachbedingung für jeden aufgetretenen Fehler
+			- Reaktionszeit: Maximale Dauer, bis Resultat vorliegt (sowohl im Normal- als auch im Fehlerfall)
+
+
+6	Modellierung von Benutzerschnittstellen
+		Darstellung
+			- Papierskizzen
+			- Bilder
+			- Screenshots
+			- Animierte Darstellungen
+		Verhalten
+			- Interaktionsdiagramme
+			- Zustandsdiagramme, z.b.:
+				- Dialoge → zusamengesetzte Zustände
+				- Interna der Dialoge → Interna in zusammengesetzten Zuständen
+				- Übergänge zwischen Dialogen → Transitionen zwischen zusammengesetzten Zuständen
+		Interaktiver Prototyp beinhaltet all dies als Referenzimplementierung
+
+
+7	Ergonomie
+		- "Design for use"
+		- Anpassung von Maschinen, Computern und Systemen an menschliche (Denk- und Kommunikations-) Fähigkeiten und Bedürfnisse
+		- Zentral ist Schnittstelle zwischen Mensch und Maschine (Mensch-Computer-Interaktion)
+		- Auswirkungen auf z.b.: Menü-Hierarchien, Kommandosprachen, Farb- und Schriftwahl, abr auch auf Arbeitsabläufe und Funktionsaufteilung zwischen Mensch und Computer
+		
+	Usability
+		- Übersetzt als "Benutzerfreundlichkeit" oder "Benutzbarkeit"
+		- Verbesserung ist Ziel der (Software-)Ergonomie
+		
+
+

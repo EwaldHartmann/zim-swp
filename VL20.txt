@@ -1,0 +1,70 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:25+02:00
+
+====== VL20 ======
+1	00:00 - 10:10		Organisatorisches, irrelevant
+2	10:10 - 26:43		Fortsetzung "Sichten"
+3	26:43 - Ende		Moduarisierung
+
+2	Code-Blickwinkel
+
+		{{../codeblickwinkel.jpg}}
+		
+		- bildet Laufzeiteinheiten auf installierbare Objekte (ausführbare Dateien, dynamische Link-Bibliotheken etc.) ab
+		- bildet Module auf Quellkomponenten (Dateien) ab
+		- zeigt, wie die installierbaren Dateien aus den Quellkomponenten generiert werden
+		
+	Engineering-Belange:
+		- wie kann die Zeit und der Aufwand für Produkt-Upgrades verringert werden?
+		- wie sollen Produktversionen verwaltet werden?
+		- wie kann die Build-Zeit verringert werden?
+		- welche Werkzeuge werden in der Entwicklungsumgebung benötigt?
+		- wie wird Integration und Test unterstützt?
+		
+		{{../codeblickwinkel2.jpg}}
+		
+		
+	Noch ein Beispiel dazu:
+		{{../codeblickwinkel3.jpg}}
+		
+		
+
+3	Modularisierung
+		Definition: Dekomposition eines Systems in Module
+		Modul: austauschbares Programmteil, das eine geschlossene Funktionseinheit bildet
+		
+	Conways Gesetz
+		Die Struktur der Software spiegelt die Struktur der Organisation wider
+	
+	Kopplung und Zusammenhalt
+		Definition Kopplung: Grad der Abhängigkeit zwischen Modulen
+		Definition Zusammenhalt (Kohärenz): Verwandtschaft der Teile eines Moduls
+		
+		{{../modularisierung.jpg}}
+		
+		
+	Kriterien für einen guten Software-Entwurf
+		Jeder Entwurf ist ein Kompromiss
+			- Geringe Kopplung zwischen allen Modulen
+			- Hoher Zusammenhalt in allen Funktionen und Modulen
+			- Kriterium der naiven Suche: Jede Einheit sollte einen leicht erkennbaren Sinn haben.
+			- Abstraktion: Implementierungsdetails verbergen
+			- Kapselung von Dingen, die sich ändern können (Geheimnisprinzip; Information Hiding)
+			- Etwa gleich große Einheiten (Module, Funktionen); Abweichungen sollten plausibel sein; generell dürfen einfache Objekte größer sein als komplizierte
+			- Uniforme Entwurfsstrategie, wenn z.b. eine Schichtenstruktur gewählt wurde, sollte sie nicht an irgendeiner Stelle korrumpiert sein
+			- Uniforme Gestaltung der Schnittstellen
+			- Uniforme Benennung
+			- Prinzip der Isomorphie zur Realität: Die Software sollte der Realität strukturell gleichen, damit die Änderungen der Realität in der Software leicht nachvollzogen werden können
+			
+			
+	Bewertung von Modularisierung 
+		Software Architecture Analysis Method (SAAM)
+	1. Lege wichtige Qualitätsaspekte fest
+	2. Beschreibe alternative Modularisierung
+	3. Entwickle Szenarien für die Qualitätsaspekte
+	4. Spiele die Szenarien durch und bewerte die Modularisierungen
+	5. Betrachte Wechselwirkungen zwischen den Qualitätsaspekten
+	6. Fasse die Evaluation zusammen
+
+

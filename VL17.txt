@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:15+02:00
+
+====== VL17 ======
+1	00:00 - 23:06 		Fortsetzung Softwareergonomie
+2	23:06 - Ende		Softwarequalität
+
+
+2	Qualitätskriterien
+		- Aufgabenangemessenheit:
+			Benutzer wird unterstützt, Arbeitsaufgabe effektiv und effizient zu erledigen
+				- Dialoge sollten nur sachdienliche Informationen erhalten
+				- Vermeidung von Ablenkungen
+					- Weniger ist mehr (Funktionen)
+					- den Bildschirm nicht überfüllen
+					- vermeide es, Befehle redundant anzubieten
+					- keine unnötigen Dialoge und Popups
+				- Optimieren von häufigen Aufgaben
+					- kleine Anzahl benötigter Schritte
+					- große Knöpfe für Hauptbefehle, Tastaturkürzel
+					- die häufigsten Funktionen auf dem ersten Bildschirm
+		- Selbstbeschreibungsfähigkeit:
+			jeder einzelne Dialogschritt ist durch Rückmeldung unmittelbar verständlich bzw. eine Erklärung ist auf Anfrage verfügbar
+		- Erwartungskonformität:
+			Dialog ist konsistent und entspricht den Merkmalen des Benutzers (zb Kenntnisse aus dem Arbeitsgebiet, Ausbildung sowie allgemeinen Konventionen)
+		- Steuerbarkeit:
+			Benutzer ist in der Lage, den Dialogablauf zu starten sowie seine Richtung und Geschwindigkeit zu beeinflussen, bis das Ziel erreicht ist.
+		- Fehlertoleranz:
+			Ziel kann trotz erkennbarer fehlerhafter Eingabe mit minimalem Korrekturaufwand durch den Benutzer erreicht werden
+		- Individualisierbarkeit:
+			Anpassungen an Erfordernisse der Arbeitsaufgabe, individuelle Vorlieben des Benutzers und Benutzerfähigkeiten sind möglich
+		- Lernförderlichkeit:
+			Benutzer wird beim Erlernen des Dialogsystems unterstützt und angeleitet
+			
+

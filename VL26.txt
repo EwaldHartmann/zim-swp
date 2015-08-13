@@ -1,0 +1,164 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:47+02:00
+
+====== VL26 ======
+1	00:00 - 03:45			Organisatorisches, irrelevant
+2	03:45 - 26:39			Fortsetzung Tests
+3	26:39 - 46:35			Testdokumentation
+4	46:35 - 1:06:00		Reviews
+5	1:06:00 - Ende		Organisatorisches, irrelevant
+
+2	Integrationstest
+		Strategien des Integrationstests
+			- Urknalltest: alle Komponenten werden einzeln entwickelt und dann in einem Schritt integriert
+				→ erschwert Fehlersuche
+			- Bottom-Up: Integration erfolgt inkrementell in umgekehrter Richtung zur Benutzt-Beziehung
+				→ Testtreiber notwendig (aber eventuell keine Testrümpfe)
+				→ Fehler in der obersten Schicht werden sehr spät entdeckt, diese enthält jedoch oft die Applikationslogik
+			- Top-Down: Integration erfolgt in Richtung der Benutzt-Beziehung
+				→ Fehler in der obersten Schicht werden sehr früh entdeckt
+				→ testrümpfe notwendig, eventuell auch einfache Testtreiber
+			- Sandwich-Test-Strategie: Kombination von Bottom-Up und Top-Down
+				- Identifikation der zu testenden Schicht: Zielschicht
+				- zuerst: individuelle Komponententests
+				- dann: kombinierte Schichttests
+					- Oberschichttest mit Zielschicht
+					- Zielschicht mit Unterschicht
+					- Alle Schichten zusammen
+		
+		Testtreiber → Das, was den Prüfling benutzt
+		Testrumpf → Das, was der Prüfling benutzt
+
+
+	Leistungstests
+		- Härtetest: viele gleichzeitige Anfragen
+		- Volumentest: große Datenmengen
+		- Sicherheitstests: Sicherheitslücken aufspüren
+		- Zeitvorgabentests: werden spezifizierte Antwortzeiten eingehalten?
+		- Erholungstests: Tests auf Erholung von fehlerhaften Zuständen
+		
+	
+	Zusammenfassung der Testarten:
+		{{../zusammenfassung.jpg}}
+		
+		
+
+
+3	Testdokumentation
+		Aufzeichnung der Testaktivitäten
+			- Testplan: Projektplan fürs Testen
+			- Testfallspezifikation: Dokumentation eines jeden Testfalls
+			- Testvorfallbericht (Testprotokoll): Ergebnisse des Tests und Unterschiede zu erwarteten Ergebnissen
+			- Testübersicht: Auflistung aller Fehler (entdeckt und noch zu untersuchen)
+				→ Analyse und Priorisierung aller Fehler und deren Korrekturen
+				
+		Testplan und testfallspezifikation können schon sehr früh erstellt werden
+		
+		
+		Testplan (IEEE Std. 829-1998 1998)
+		
+	1. Einführung
+	2. Systemüberblick
+	3. Merkmale, die getestet / nicht getestet werden müssen
+	4. Abnahmekriterien
+	5. Vorgehensweise
+	6. Aufhebung und Wiederaufnahme
+	7. Zu prüfendes Material (Hardware- / Softwareanforderungen)
+	8. Testfälle
+	9. Testzeitplan: Verantwortlichkeiten, Personalausstattung und Weiterbildungsbelange, Risiken und Schadensmöglichkeiten, Zeitplan
+
+
+		Testfallspezifikation:
+			- Testfallbezeichner: eindeutiger Name des Testfalls; am Besten Namenskonventionen benutzen
+			- Testobjekte: Komponenten (und deren Merkmale), die getestet werden sollen
+			- Eingabespezifikationen: erwartete Eingaben
+			- Ausgabespezifikationen: erwartete Ausgaben
+			- Umgebungserfordernisse: notwendige Software- und Hardware-Plattform sowie Testrümpfe und -stümpfe
+			- Besondere prozedurale Anforderungen: Einschränkungen wie Zeitvorgaben, Belastung oder Eingreifen durch den Operateur
+			- Abhängigkeiten zwischen Testfällen
+
+		
+		Testschadensbericht:
+			- welche Merkmale wurden getestet
+			- wurden sie erfüllt?
+			- bei Störfällen: wie können sie reproduziert werden?
+			
+			→ Sammlung und Priorisierung in der Testübersicht
+			→ Test != Fehlersuche bzw. -korrektur!
+
+
+4	Dokumenten-Reviews
+		{{../dokureview.jpg}}
+		
+		
+	Reviews:
+		Prinzip:
+			- Eine Software-Einheit wird dezentral von mehreren Gutachtern inspiziert
+			- in einer gemeinsamen Sitzung werden die Mängel zusammengetragen und dokumentiert
+		Ziel:
+			- Fehler zu finden
+			- nicht, die Fehler auch zu beheben
+
+		
+		{{../gutachterreview.jpg}}
+		
+		
+		Rollen im Review:
+			Moderator
+			 → Managed das Vorgehen
+			Autor
+			 → soll sich nicht rechtfertigen
+			Sekretär
+			 → soll alles mitschreiben
+			Gutachter
+			 → begutachten halt
+			
+			
+		Review-Prozess
+			{{../reviewprozess.jpg}}
+			
+			
+	
+	Checkliste für Anforderungsdokument
+		Aspekt "Form"
+	1. Sind Anforderungen als solche erkennbar, d.h. von Erklärungen unterscheidbar?
+	2. Sind alle Anforderungen eindeutig referenzierbar?
+	3. Ist die Spezifikation jeder Anforderung eindeutig?
+	4. Sind alle Anforderungen überprüfbar dokumentiert?
+
+		Aspekt "Vertraulichkeit"
+	1. Ist spezifiziert, welche Information vertraulich zu behandeln ist?
+	2. Sind die Zugriffsrechte aller Benutzerklassen definiert?
+	3. Ist definiert, gegen welche Art von unberechtigtem Zugriff die Information geschützt werden muss?
+
+		Aspekt "Schnittstellen"
+	1. Sind alle Objekte der Umgebung (Benutzer, andere Systeme, Basis-Software etc.) sowie alle Informationsflüsse von und nach diesem Objekt spezifiziert?
+	2. Sind alle Benutzerklassen (Dauerbenutzer, gelegentliche Benutzer, SysAdmin etc.) des Systems identifiziert?
+	3. ...
+
+	7. Sind Vorgaben gemacht bezüglich Verwendung von Betriebssystem-Funktionen, Bibliotheken und Hilfsprogrammen? 
+
+
+	
+	Varianten des Reviews
+		Design and Code Inspection
+			- mit Einführungssitzung,
+			- Gutachter-Notizen, die abgegeben werden,
+			- Vorleser,
+			- Entscheidungskompetenz,
+			- Metriken-Erhebung
+
+		Structured Walkthrough
+			- ist die Billig-Variante des Reviews: Autor ist Moderator;
+			- er kompensiert durch seine Präsentation die Einsparung (oder Reduktion) der Vorbereitung;
+			- während seiner Vorbereitung entdeckt er selbst viele Fehler
+
+		Stellungnahme
+			- ist ein "off-line"–Review unter der Regie des Autors;
+			- den Vorteilen (geringer Organisationsaufwand) stehen erhebliche Nachteile gegenüber (Prüfling nicht vor Weiterbearbeitung geschützt, Qualität der Prüfung und Umsetzung der Resultate nicht kontrolliert).
+
+		Schreibtischtest
+			- führt jeder Entwickler allein durch (vgl. Humphreys Personal Software Process);
+			- ersetzt die eigentliche Prüfung nicht.
+

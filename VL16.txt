@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-04T07:41:11+02:00
+
+====== VL16 ======
+1	00:00 - 56:31		Vorführung Vorgängerversion des neuen SWP2-Projekts, irrelevant
+2	56:31 - Ende		Fortsetzung Ergnonomie
+
+
+1	Irrelevant.
+
+
+2	Vergleich GUI und Kommandosprachen
+		Kommandosprachen:
+			- komplexe Operationen
+			- intensive Nutzung, Experten
+			- funktionale Bedienung, Berechnungen
+		GUI:
+			- einfach Operationen
+			- gelegentlicher Einsatz, leichte Erlernbarkeit
+			- Objektorientierung
+			
+	Dialogtypen (zb Warnungen)
+		- modal: Dialog muss abgeschlossen werden, bevor nächster Dialog beginnt
+		- nicht-model: Dialoge können Co-existieren
+
