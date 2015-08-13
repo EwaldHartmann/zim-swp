@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-13T21:17:52+02:00
+
+====== DBG ======
+Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
+
+1	Installation und Einrichtung
+2	Erste Schritte
+3	DB-Änderungen
+4	Primary- und Foreign-Key
+
+
+1	Installationshinweise Windows
+		[Hier kann sich gern jemand dran vergehen]
+
+	Installationshinweise Linux
+		Zuerst installiert ihr über den jeweiligen Paketmanager das Paket "postgresql" (sofern noch nicht geschehen)
+		In meinem Fall, unter Arch Linux via
+			sudo pacman -S postgresql
+		Für Ubuntu und Debian wäre der Befehl
+			sudo apt-get install postgresql
+			
+		Da das System sicher bleiben soll, verpasst dem neu erstellten Nutzer 'postgres' bitte ein Passwort.
+			sudo passwd postgres
+			
+		Als nächstes muss ein Cluster für die Datenbank angelegt werden, das macht ihr als Nutzer 'postgres'.
+		Benutzer wechseln
+			sudo -i -u postgres
+		Schließlich die Initialisierung
+			initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'
+
+		Danach muss der Service gestartet und permanent aktiviert werden - benutzt ihr systemd, passiert das über
+			sudo systemctl enable postgres.service && sudo systemctl start postgres.service
+			
+		[Hier bitte einfügen, wie es ohne systemd gemacht wird]
+
+		Jetzt ist es auch fast geschafft, ihr müsst noch einen Benutzer für PostgreSQL anlegen, das passiert (als User 'postgres') via
+			createuser --interactive
+			
+		Ein kleiner Tipp - benutzt ihr euren normalen Usernamen auch als User für PostgreSQL, spart ihr euch den ständigen Userwechsel wenn ihr mal etwas an der DB ändern wollt.
+		
+		Last, but not least legt ihr mit eurem frischen PostgreSQL-User eine Datenbank an.
+			createdb swp
+			
+			
+2
+
