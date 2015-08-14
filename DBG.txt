@@ -12,7 +12,7 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 
 
 1	Installationshinweise Windows
-		[Hier kann sich gern jemand dran vergehen]
+		[Hier kann sich gern jemand dran vergehen + Pull Request auf GitHub]
 
 	Installationshinweise Linux
 		Zuerst installiert ihr über den jeweiligen Paketmanager das Paket "postgresql" (sofern noch nicht geschehen)
@@ -33,16 +33,106 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 		Danach muss der Service gestartet und permanent aktiviert werden - benutzt ihr systemd, passiert das über
 			sudo systemctl enable postgres.service && sudo systemctl start postgres.service
 			
-		[Hier bitte einfügen, wie es ohne systemd gemacht wird]
+		[Hier bitte einfügen, wie es ohne systemd gemacht wird + Pull Request auf GitHub]
 
 		Jetzt ist es auch fast geschafft, ihr müsst noch einen Benutzer für PostgreSQL anlegen, das passiert (als User 'postgres') via
 			createuser --interactive
 			
 		Ein kleiner Tipp - benutzt ihr euren normalen Usernamen auch als User für PostgreSQL, spart ihr euch den ständigen Userwechsel wenn ihr mal etwas an der DB ändern wollt.
 		
-		Last, but not least legt ihr mit eurem frischen PostgreSQL-User eine Datenbank an.
+		Last, but not least legt ihr mit eurem frischen PostgreSQL-User eine Datenbank an und starten danach:
 			createdb swp
-			
-			
-2
+		
+			psql -d swp
 
+	
+			
+2	Beginnen wir damit, einen Table zu erstellen, in welchem die Stammdaten der Studierenden der Universität Bremen verzeichnet sind.
+	Welche Datenfelder wären hier sinnvoll?
+		- Matrikelnummer / Integer
+- Vorname / varchar
+- Nachname / varchar
+- Strasse und Hausnummer / varchar
+- Postleitzahl / integer
+- Ort / varchar
+
+	Warum benutze ich varchar statt char?
+		char(n) benötigt eine feste Anzahl von maximal möglichen Zeichen, da wir aber nicht wissen können wie lang Namen mal werden können, geben wir diesen Feldern variable Längen. Das gleiche gilt natürlich auch für den Ort und den Strassennamen.
+		
+		create table students (matrikel int, vorname varchar, nachname varchar, strasse varchar, plz int, ort varchar);
+
+	Dann legen wir doch auch gleich mal ein paar Studierende an: (sämtliche Daten sind frei erfunden, zufällige übereinstimmungen mit realen Personen sind nicht beabsichtigt)
+	
+		insert into students values(1234567, 'Karl-Heinz', 'Müller', 'Am Wall 42', 28555, 'Bremen');
+		insert into students values(7654321, 'Anna', 'Schulz', 'Schillerstrasse 23', 28135, 'Bremen');
+		insert into students values(2394746, 'Frank', 'Heumann', 'Am Sandstich 3', 24795, 'Ottersberg');
+		insert into students values(1234567, 'Sabine', 'Schmidt', 'Rosenstrasse 7', 27534, 'Delmenhorst');
+		
+	Beim eintragen muss man darauf achten dass Texte, also was unseren Typ varchar befüllt, immer in 'text' stehen muss, andernfalls erhalten wir einen Fehler.
+	Okay, schauen wir uns an ob das schonmal funktioniert hat - wir rufen alle Einträge aus dem Table 'Students' ab:
+	
+		select * from students;
+			{{../images/select_dbg.jpg}}
+		
+		
+		Statt dem '*', mit dem wir alle Daten abrufen, könnten wir das natürlich auch verfeinern. 
+		Wir schauen jetzt einmal nach allen Einträgen mit der Matrikelnummer '1234567' und lassen uns nur die Vornamen ausgeben:
+			select vorname from students where matrikel=1234567;
+				{{../images/select_name_where_matrikel.jpg}}
+				
+		Huch, 2 Studenten mit der gleichen Matrikelnummer.. das sollte so aber nicht vorkommen.
+		
+
+3	Beginnen wir hier damit, den Fehler aus dem vorherigen Abschnitt zu korrigieren, schließlich können keine zwei Studierende die gleiche Matrikelnummer haben.
+
+	Das machen wir am einfachsten mit dem Befehl 'update'.
+	Karl-Heinz war zuerst da, also nehmen wir einfach an dass die Nummer bei Sabine falsch eingetragen wurde und ändern sie auf 2345678:
+		update students set matrikel=2345678 where vorname='Sabine';
+		
+	Zur Kontrolle führen wir noch einmal den Befehl aus dem letzten Abschnitt aus:
+			select vorname from students where matrikel=1234567;
+		
+		Hier bekommen wir nur noch Karl-Heinz angezeigt. Wunderbar, wir haben der Verwaltung den Tag gerettet!
+		
+	Jetzt fällt uns aber auf, dass wir keine möglichkeit haben die Studierenden schnell zu erreichen. Telefonnummern wären doch etwas tolles.
+	Dafür fügen wir unserem Table eine weitere Spalte hinzu:
+		alter table students add column telefon varchar;
+		
+	Warum habe ich hier varchar statt integer genommen?
+		max integer (bei 32 bit) liegt bei 2,147,483,647 - könntet ihr eure Telefonnummer in diesem Zahlenraum unterbringen? Ausserdem könnte man für Nummern im Ausland könnte man kein '+' an den Anfang setzen. Also ist das nicht unbedingt, was wir wollen.
+		Führende Nullen werden leider entfernt - falls jemand weiss wie man das ändert, bitte hier updaten und einen Pull-Request auf GitHub machen.
+		
+	Geben wir unseren Studierenden doch mal Telefonnummern (diese entstehen durch zufälliges randalieren auf dem Num-Pad, eventuelle reale nummern sind nicht beabsichtigt)
+	
+		update students set telefon=0132546548 where vorname='Karl-Heinz';
+		update students set telefon=02145686876 where vorname='Anna';
+		update students set telefon=025886321 where vorname='Frank';
+		update students set telefon=0269826324 where vorname='Sabine';
+		
+	Ein kurzer Blick, ob alles stimmt:
+		select * from students;
+			{{../images/daten_inkl_telefon.jpg}}
+			
+		Ja, das kann man so lassen.
+		
+		
+4	Nun wollen wir noch doppelte Matrikelnummern in Zukunft vermeiden.
+	Das Mittel der Wahl wäre hier ein Primary Key, und als solche nutzen wir die Matrikelnummer.
+	Also verändern wir mal wieder unseren table:
+		alter table students add primary key (matrikel);
+		
+	Das wars auch schon. Schauen wir uns jetzt mittels  '\d students' alle Werte unseres Table an, so sehen wir schonmal dass Matrikel nicht NULL sein darf:
+		{{../images/backslashd_students.jpg}}
+		
+	Und wir überprüfen sicherheitshalber, ob man auch wirklich keine doppelten Matrikelnummern anlegen kann:
+		{{../images/error_duplicate.jpg}}
+		
+		Wunderbar!
+		
+	
+	
+	
+	An dieser Stelle ist mein kurzes beispiel leider schon zuende. 
+	Aber ihr habt doch bestimmt selbst Ideen, wir würden uns sehr über jeden Pull-Request freuen.
+	Nicht vergessen - anderen etwas erklären festigt auch bei euch das Wissen, und vermutlich helft ihr anderen noch beim verständnis des ganzen.
+	
