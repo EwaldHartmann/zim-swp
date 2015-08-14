@@ -40,7 +40,7 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 			
 		Ein kleiner Tipp - benutzt ihr euren normalen Usernamen auch als User für PostgreSQL, spart ihr euch den ständigen Userwechsel wenn ihr mal etwas an der DB ändern wollt.
 		
-		Last, but not least legt ihr mit eurem frischen PostgreSQL-User eine Datenbank an und starten danach:
+		Last, but not least legen wir mit eurem frischen PostgreSQL-User eine Datenbank an und starten danach:
 			createdb swp
 		
 			psql -d swp
@@ -68,7 +68,7 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 		insert into students values(2394746, 'Frank', 'Heumann', 'Am Sandstich 3', 24795, 'Ottersberg');
 		insert into students values(1234567, 'Sabine', 'Schmidt', 'Rosenstrasse 7', 27534, 'Delmenhorst');
 		
-	Beim eintragen muss man darauf achten dass Texte, also was unseren Typ varchar befüllt, immer in 'text' stehen muss, andernfalls erhalten wir einen Fehler.
+	Beim eintragen muss man darauf achten dass Texte, also was unseren Typ varchar befüllt, immer in ' ' stehen muss, andernfalls erhalten wir einen Fehler.
 	Okay, schauen wir uns an ob das schonmal funktioniert hat - wir rufen alle Einträge aus dem Table 'Students' ab:
 	
 		select * from students;
@@ -77,7 +77,10 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 		
 		Statt dem '*', mit dem wir alle Daten abrufen, könnten wir das natürlich auch verfeinern. 
 		Wir schauen jetzt einmal nach allen Einträgen mit der Matrikelnummer '1234567' und lassen uns nur die Vornamen ausgeben:
-			select vorname from students where matrikel=1234567;
+			select vorname from students where matrikel=1234567.
+		
+		Durch das 'where' legen wir fest dass die Ausgabe nur diejenigen Einträge berücksichtigt, die mit dem übergebenen Wert übereinstimmen.
+		
 				{{../images/select_name_where_matrikel.jpg}}
 				
 		Huch, 2 Studenten mit der gleichen Matrikelnummer.. das sollte so aber nicht vorkommen.
@@ -94,13 +97,14 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 		
 		Hier bekommen wir nur noch Karl-Heinz angezeigt. Wunderbar, wir haben der Verwaltung den Tag gerettet!
 		
-	Jetzt fällt uns aber auf, dass wir keine möglichkeit haben die Studierenden schnell zu erreichen. Telefonnummern wären doch etwas tolles.
+	Jetzt fällt uns aber auf, dass wir keine möglichkeit haben die Studierenden schnell zu erreichen. Telefonnummern zu haben wären doch etwas tolles.
 	Dafür fügen wir unserem Table eine weitere Spalte hinzu:
 		alter table students add column telefon varchar;
 		
 	Warum habe ich hier varchar statt integer genommen?
-		max integer (bei 32 bit) liegt bei 2,147,483,647 - könntet ihr eure Telefonnummer in diesem Zahlenraum unterbringen? Ausserdem könnte man für Nummern im Ausland könnte man kein '+' an den Anfang setzen. Also ist das nicht unbedingt, was wir wollen.
-		Führende Nullen werden leider entfernt - falls jemand weiss wie man das ändert, bitte hier updaten und einen Pull-Request auf GitHub machen.
+		max integer (bei 32 bit) liegt bei 2,147,483,647 - könntet ihr eure Telefonnummer inkl. Vorwahl in diesem Zahlenraum unterbringen? Spätestens bei Handynummern dürfte das ganze ziemlich knapp werden.
+		Ausserdem könnte man für Nummern im Ausland kein '+' an den Anfang setzen (wie z.b. +49 statt 0049 für Deutschland). Also ist das nicht unbedingt, was wir wollen.
+		[ Führende Nullen werden leider entfernt - falls jemand weiss wie man das ändert, bitte hier updaten und einen Pull-Request auf GitHub machen. ]
 		
 	Geben wir unseren Studierenden doch mal Telefonnummern (diese entstehen durch zufälliges randalieren auf dem Num-Pad, eventuelle reale nummern sind nicht beabsichtigt)
 	
@@ -109,7 +113,7 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 		update students set telefon=025886321 where vorname='Frank';
 		update students set telefon=0269826324 where vorname='Sabine';
 		
-	Ein kurzer Blick, ob alles stimmt:
+	Ein kurzer Blick ob alles stimmt:
 		select * from students;
 			{{../images/daten_inkl_telefon.jpg}}
 			
@@ -121,8 +125,10 @@ Hier noch etwas eigenkreation für den DBG-Teil der Klausur.
 	Also verändern wir mal wieder unseren table:
 		alter table students add primary key (matrikel);
 		
-	Das wars auch schon. Schauen wir uns jetzt mittels  '\d students' alle Werte unseres Table an, so sehen wir schonmal dass Matrikel nicht NULL sein darf:
+	Das wars auch schon. Schauen wir uns jetzt mittels  '\d students' alle Eigenschaften unseres Table an, so sehen wir schonmal dass Matrikel nicht NULL sein darf:
 		{{../images/backslashd_students.jpg}}
+		'\d' zeigt euch alles an, was dem übergebenen pattern entspricht. Ihr könntet so auch über mehrere Tables verteilt nach einem bestimmten Bezeichner suchen.
+		Das dürfte für die Klausur irrelevant sein, aber ihr habt garantiert noch ein paar mal mit Datenbanken zu tun.
 		
 	Und wir überprüfen sicherheitshalber, ob man auch wirklich keine doppelten Matrikelnummern anlegen kann:
 		{{../images/error_duplicate.jpg}}
