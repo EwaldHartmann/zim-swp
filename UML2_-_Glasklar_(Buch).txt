@@ -5,3 +5,13 @@ Creation-Date: 2015-08-10T08:58:06+02:00
 ====== UML2 - Glasklar (Buch) ======
 To-Do (Beispiele etc), Link siehe VL 11 Punkt 2
 
+Diagrammerklärungen mit (pdf-)Seitenangaben, in der Reihenfolge in der sie in der Vorlesung angesprochen wurden:
+
+Objektdiagramm: (200) 183
+Klassendiagramm: (125) 107
+Paketdiagramm: (188) 171
+Aktivitätsdiagramm: (278) 263
+Interaktionsdiagramm: (513) 501
+Sequenzdiagramm: (415) 401
+Zustandsautomatendiagramm: (343) 329
+Komponentendiagramm: (232) 215
